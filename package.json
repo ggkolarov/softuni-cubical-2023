@@ -1,0 +1,25 @@
+{
+  "name": "softuni-cubical-2023",
+  "version": "1.0.0",
+  "description": "Softuni Course Project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggkolarov/softuni-cubical-2023.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ggkolarov/softuni-cubical-2023/issues"
+  },
+  "homepage": "https://github.com/ggkolarov/softuni-cubical-2023#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
