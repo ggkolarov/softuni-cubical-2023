@@ -1,25 +1,20 @@
-const cubeController = require('./controllers/cubeController');
-
 // one line
 const router = require('express').Router();
 
-// three lines
-// const express = require('express');
-// const Router = express.Router;
-// const router = Router();
+/* three lines
+const express = require('express');
+const Router = express.Router;
+const router = Router(); */
+
+const homeController = require('./controllers/homeController');
+const aboutController = require('./controllers/homeController');
+const cubeController = require('./controllers/cubeController');
 
 // Home page
-router.get('/', (req, res) => {
-    // res.send('Home page'); // starting normally
-    // res.render('home', {layouts: false}); // starting with express
-    res.render('index'); // starting with express
-});
-
+router.get('/', homeController.getHomePage);
 // About page
-router.get('/about', (req, res) => {
-    res.render('about');
-});
-
+router.get('/about', homeController.getAboutPage);
+// Create page
 router.get('/create', cubeController.getCreateCube); // controllers usage
 
 module.exports = router;
