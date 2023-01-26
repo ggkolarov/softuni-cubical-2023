@@ -23,4 +23,8 @@ app.get('/', (req, res) => {
     res.render('home'); // starting with express
 });
 
+// setting the static files
+app.use(express.static('src/public'));
+
+// Starting the server
 app.listen(config.PORT, () => console.log(`Server is running on port ${config.PORT}......`));
