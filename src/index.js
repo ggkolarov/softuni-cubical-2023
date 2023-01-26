@@ -20,6 +20,7 @@ require('./config/viewEngine')(app); not recommended
 
 // setting the static files / getting the css files, images and etc.
 app.use(express.static('src/public'));
+app.use(express.urlencoded({extended: false}));
 app.use(routes);
 
 // Starting the server
