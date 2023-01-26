@@ -20,10 +20,14 @@ require('./config/viewEngine')(app);
 app.get('/', (req, res) => {
     // res.send('Home page'); // starting normally
     // res.render('home', {layouts: false}); // starting with express
-    res.render('home'); // starting with express
+    res.render('index'); // starting with express
 });
 
-// setting the static files
+app.get('/about', (req, res) => {
+    res.render('about');
+});
+
+// setting the static files / getting the css files, images and etc.
 app.use(express.static('src/public'));
 
 // Starting the server
