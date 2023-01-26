@@ -1,15 +1,22 @@
 const express = require('express');
-const handlebars = require('express-handlebars');
 
-const config = require('./config');
-
+//initiate express framework
 const app = express();
+// Port env setup
+const config = require('./config');
+// Express-handlebars setup
+// First version of getting the code from viewEngine
+const setupViewEngine = require('./config/viewEngine');
 
-app.engine('hbs', handlebars.engine({
-    extname: 'hbs' // changing the default setting of searching main.handlebars in layouts folder
-}));
-app.set('view engine', 'hbs')
-app.set('views', './src/views') // seting 'views' folder to be not top level in the main project folder and changing the path to it
+setupViewEngine(app);
+
+/*
+--------------------------------
+// Second version
+require('./config/viewEngine')(app);
+-------------------------------- 
+*/
+
 app.get('/', (req, res) => {
     // res.send('Home page'); // starting normally
     // res.render('home', {layouts: false}); // starting with express
