@@ -4,7 +4,7 @@
   "description": "Softuni Course Project",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "SET node_env=production&& node ./src/index.js",
     "dev": "nodemon ./src/index.js"
   },
   "repository": {
@@ -18,7 +18,9 @@
     "url": "https://github.com/ggkolarov/softuni-cubical-2023/issues"
   },
   "homepage": "https://github.com/ggkolarov/softuni-cubical-2023#readme",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.18.2"
+  },
   "devDependencies": {
     "nodemon": "^2.0.20"
   }
