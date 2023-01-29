@@ -1,12 +1,28 @@
 {
   "cubes": [
     {
-      "name": {
-        "name": "sasasa",
-        "description": "d223",
-        "imageUrl": "https://cdn.vox-cdn.com/thumbor/7B9g_99xn568t3xDpzkMP7VRI6o=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22215403/acastro_210104_1777_google_0001.jpg",
-        "difficultyLevel": "4"
-      }
+      "name": "Gan356 Air SM",
+      "description": "test",
+      "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+      "difficultyLevel": "1"
+    },
+    {
+      "name": "Eco-Dark",
+      "description": "test",
+      "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
+      "difficultyLevel": "2"
+    },
+    {
+      "name": "Pyraminx",
+      "description": "test",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61izOzq%2BBAL._SY355_.jpg",
+      "difficultyLevel": "3"
+    },
+    {
+      "name": "Normal Cube",
+      "description": "a normal rubik's cube",
+      "imageUrl": "https://m.media-amazon.com/images/I/81a7IEinLiL.jpg",
+      "difficultyLevel": "5"
     }
   ]
 }
