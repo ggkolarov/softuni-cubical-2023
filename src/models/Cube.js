@@ -11,6 +11,7 @@ class Cube {
     }
 
     static save(cube) {
+        cube.id = db.cubes[db.cubes.length - 1].id + 1; // generating the ids of the cubes
         db.cubes.push(cube); // db is object
         const jsonData = JSON.stringify(db, null, 2); // db to json
         fs.writeFileSync(path.resolve(__dirname, '../db.json'), jsonData);
