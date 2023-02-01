@@ -1,16 +1,17 @@
-const Cube = require('../models/Cube_old');
+// const Cube = require('../models/Cube_old');
+const Cube = require('../models/Cube');
 const db = require('../db.json');
 
 exports.getCreateCube = (req, res) => { // named export
     res.render('create');
 };
 
-exports.postCreateCube = (req, res) => {
+exports.postCreateCube = async (req, res) => {
     const {name, description, imageUrl, difficultyLevel} = req.body;
     //save cube
-    let cube = new Cube(name, description, imageUrl, difficultyLevel); // destruction
+    let cube = new Cube({name, description, imageUrl, difficultyLevel}); // destruction
     
-    Cube.save(cube);
+    await cube.save();
     //redirect
     res.redirect('/');
 };
