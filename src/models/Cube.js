@@ -10,12 +10,18 @@ const cubeSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true,
-        maxLength: 50
+        maxLength: 50 // check real length
     },
     imageUrl: {
         type: String,
         required: true,
-        // add https validation
+        // match: /^http[s]?:\/\// // regex
+        validate: {
+            validator: function(value) {
+                return value.startsWith('http://') ||  value.startsWith('https://')
+            },
+            message: 'URL is invalid!'
+        }
     },
     difficultyLevel: {
         type: Number,
