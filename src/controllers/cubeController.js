@@ -34,5 +34,10 @@ exports.getAttachAccessory = async (req, res) => {
 };
 
 exports.postAttachAccessory = async (req, res) => { // connecting a given cube with a specific accessory
-    awa
+    const cube = await Cube.findById(req.params.cubeId);
+    const accessoryId = req.body.accessory;
+    cube.accessories.push(accessoryId);
+
+    cube.save();
+    res.redirect(`/cubes/${cube._id}/details`)
 };

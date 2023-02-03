@@ -1,8 +1,8 @@
-const { Schema, model} = require('mongoose'); // destruction
+const mongoose = require('mongoose'); // destruction
 
 // creating scheme
 
-const cubeSchema = new Schema({
+const cubeSchema = new mongoose.Schema({
     name: {
         type: String, 
         required: true
@@ -22,11 +22,17 @@ const cubeSchema = new Schema({
         required: true,
         max: 6,
         min: 1
-    }
+    },
+    accessories: [
+        {
+            type: mongoose.Types.ObjectId,
+            ref: 'Accessory'
+        }
+    ]
 });
 
 // creating model
 
-const Cube = model('Cube', cubeSchema); // imeto na modela, scheme name
+const Cube = mongoose.model('Cube', cubeSchema); // imeto na modela, scheme name
 
 module.exports = Cube;
