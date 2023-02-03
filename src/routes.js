@@ -17,15 +17,12 @@ router.get('/about', homeController.getAboutPage);
 // Create page
 router.get('/404', homeController.getErrorPage);
 
-router.get('/create', cubeController.getCreateCube); // controllers usage
-
-router.post('/create', cubeController.postCreateCube);
-
+router.get('/cubes/create', cubeController.getCreateCube); // controllers usage
+router.post('/cubes/create', cubeController.postCreateCube);
 router.get('/cubes/:cubeId/details', cubeController.getDetails);
-
 router.get('/cubes/:cubeId/attach', cubeController.getAttachAccessory);
 router.post('/cubes/:cubeId/attach', cubeController.postAttachAccessory);
 
-router.use('/accessory', accessoryController); // if the url starts with /accessory it means that it is for the accessoryController 
+router.use('/accessories', accessoryController); // if the url starts with /accessory it means that it is for the accessoryController 
 
 module.exports = router;
