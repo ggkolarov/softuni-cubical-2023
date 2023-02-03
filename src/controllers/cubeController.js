@@ -32,3 +32,7 @@ exports.getAttachAccessory = async (req, res) => {
 
     res.render('cube/attach', { cube, accessories }) // podavane kum tepleita attach.hbs
 };
+
+exports.postAttachAccessory = async (req, res) => { // connecting a given cube with a specific accessory
+    awa
+};
