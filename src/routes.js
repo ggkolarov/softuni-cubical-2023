@@ -9,6 +9,7 @@ const router = Router(); */
 const homeController = require('./controllers/homeController');
 const cubeController = require('./controllers/cubeController');
 const accessoryController = require('./controllers/accessoryController');
+const authController = require('./controllers/authController');
 
 // Home page
 router.get('/', homeController.getHomePage);
@@ -16,6 +17,8 @@ router.get('/', homeController.getHomePage);
 router.get('/about', homeController.getAboutPage);
 // Create page
 router.get('/404', homeController.getErrorPage);
+
+router.use('/', authController);
 
 router.get('/cubes/create', cubeController.getCreateCube); // controllers usage
 router.post('/cubes/create', cubeController.postCreateCube);
