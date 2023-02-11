@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const routes = require('./routes');
 // Port env setup
 const config = require('./config');
+const authMiddleware = require('./middlewares/authMiddleware');
 // Express-handlebars setup
 // First version of getting the code from viewEngine
 const setupViewEngine = require('./config/viewEngine');
@@ -24,6 +25,7 @@ setupViewEngine(app);
 app.use(express.static('src/public'));
 app.use(cookieParser());
 app.use(express.urlencoded({extended: false})); //middleware
+app.use(authMiddleware.authentication);
 app.use(routes);
 
 // Starting the server
