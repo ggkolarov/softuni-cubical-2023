@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 
 const routes = require('./routes');
 // Port env setup
@@ -17,11 +18,11 @@ require('./config/viewEngine')(app); not recommended
 
 //initiate express framework
 const app = express();
-
 setupViewEngine(app);
 
 // setting the static files / getting the css files, images and etc.
 app.use(express.static('src/public'));
+app.use(cookieParser());
 app.use(express.urlencoded({extended: false})); //middleware
 app.use(routes);
 
